@@ -30,6 +30,4 @@ expected result: Edit customer template opened<br />
 data: First Name = Mark, Last Name = Zuckerberg<br />
 expected result: Curtomer new First Name, new Last Name, Loalty card number = "", Vaikimisi grupp appeared in the left panel and in the right panel
 
-## TC4: Intercept test
-
-## TC5: Intercept test for an error case
+## TC4: Intercept creating customer
