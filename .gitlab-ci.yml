@@ -1,0 +1,40 @@
+stages:
+  - build
+  - test
+
+variables:
+  npm_config_cache: '$CI_PROJECT_DIR/.npm'
+  CYPRESS_CACHE_FOLDER: '$CI_PROJECT_DIR/cache/Cypress'
+
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - cache/Cypress
+    - node_modules
+    - build
+
+install:
+  image: cypress/base:10
+  stage: build
+
+  script:
+    - npm ci
+    - npx cypress cache path
+    - npx cypress cache list
+    - $(npm bin)/print-env CI
+    - npm run cy:verify
+    - npm run cy:info
+
+.job_template:
+  image: cypress/base:10
+  stage: test
+  script:
+    - $(npm bin)/print-env CI
+    - npm run start &
+    - npm run e2e:record -- --parallel --group "electrons on GitLab CI"
+  artifacts:
+    when: always
+    paths:
+      - cypress/videos/**/*.mp4
+      - cypress/screenshots/**/*.png
+    expire_in: 1 day
