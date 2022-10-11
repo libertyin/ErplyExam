@@ -1,0 +1,25 @@
+{
+    "customer1": {
+        "firstName": "Mark",
+        "lastName": "Zuckerberg",
+        "customerGroup": "Vaikimisi grupp"
+    },
+    "customer2": {
+        "firstName": "Elon",
+        "lastName": "Musk",
+        "customerGroup": "Vaikimisi grupp",
+        "cardNumber": "79250001",
+        "email": "elon.mask@gmail.com",
+        "phone": "212-456-7890"
+    },
+    "customer3": {
+        "firstName": "Bill",
+        "lastName": "Gates",
+        "customerGroup": "Vaikimisi grupp",
+        "cardNumber": "79250002",
+        "mobile": "+11111111111",
+        "homeStore": "Põhiladu",
+        "birthdayDD": "01",
+        "birthdayMM": "12"
+    }
+}

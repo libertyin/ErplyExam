@@ -1,0 +1,25 @@
+{
+  "name": "erplyexam",
+  "version": "1.0.0",
+  "description": "Erply Exam",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "cypress open",
+    "cy:run:chrome": "cypress run --browser chrome",
+    "cy:run:edge": "cypress run --browser edge",
+    "cy:run:firefox": "cypress run --browser firefox"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/libertyin/ErplyExam.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/libertyin/ErplyExam/issues"
+  },
+  "homepage": "https://github.com/libertyin/ErplyExam#readme",
+  "devDependencies": {
+    "cypress": "^10.9.0"
+  }
+}
